@@ -15,7 +15,8 @@
   <include>python_array_test.xml</include>
   <include>standard.xml</include>
   <include>test.xml</include>
-  <include>ualberta.xml</include>
+  <!-- <include>ualberta.xml</include> -->
+  <include>Albatros.xml</include>
   <include>uAvionix.xml</include>
   <!-- external dialects -->
   <!-- storm32.xml range of IDs:

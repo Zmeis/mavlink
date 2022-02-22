@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<mavlink>
+ <enums>
+  <enum name="PARACHUTE_ACTION">
+   <description>Parachute actions. Trigger release and enable/disable auto-release.</description>
+   <entry value="101" name="ALB_PARACHUTE_PREFLIGHT_RESET">
+    <description>Pre-flight check: parachute reset.</description>
+   </entry>
+   <entry value="102" name="ALB_PARACHUTE_RELEASE">
+    <description>Release parachute and kill motors.</description>
+   </entry>
+  </enum>
+ </enums>
+ <messages>
+  <message id="220" name="TIME_WHEN_ARMED">
+   <description>Time time_boot_ms when autopilot armed</description>
+   <field type="uint32_t" name="msec">Timestamp (milliseconds)</field>
+  </message>
+ </messages>
+</mavlink>

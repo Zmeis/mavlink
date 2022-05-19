@@ -4483,6 +4483,8 @@
       <description>Message that sends 1 times per sec for Albatros</description>
       <field type="int32_t" name="alt" units="mm">Altitude in meters, expressed as * 1000 (millimeters), AMSL (not WGS84 - note that virtually all GPS modules provide the AMSL as well)</field>
       <field type="int32_t" name="relative_alt" units="mm">Altitude above ground in meters, expressed as * 1000 (millimeters)</field>
+      <field type="uint16_t" name="hdop">GPS hdop</field>
+      <field type="uint32_t" name="flight_time" units="s"></field>
     </message>
     <message id="229" name="ATTITUDE_SHORT">
       <description>The cutted attitude in the aeronautical frame (right-handed, Z-down, X-front, Y-right).</description>

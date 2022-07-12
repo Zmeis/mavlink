@@ -46,7 +46,7 @@
     <field type="float" name="climb" units="m/s">Current climb rate in meters/second</field>
     <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp of the component clock since boot time in milliseconds.</field>
   </message>
-  <message id="221" name="ALBATROS_10_MSG">
+  <message id="222" name="ALBATROS_10_MSG">
     <description>Message that sends 10 times per sec for Albatros</description>
     <field type="float" name="roll" units="rad">Roll angle (rad, -pi..+pi)</field>
     <field type="float" name="pitch" units="rad">Pitch angle (rad, -pi..+pi)</field>

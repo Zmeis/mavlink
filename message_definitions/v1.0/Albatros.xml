@@ -25,6 +25,18 @@
      </entry>
      <entry value="17" name="MAV_DATA_STREAM_ALBATROS_ES"></entry>
    </enum>
+   <enum name="MAV_CMD">
+     <entry value="43003" name="MAV_CMD_ALB_POS_CORR" hasLocation="false" isDestination="false">
+         <description>Set the distance to be repeated on mission resume</description>
+         <param index="1" label="lat" units="degE7"></param>
+         <param index="2" label="lon" units="degE7"></param>
+         <param index="3">Empty.</param>
+         <param index="4">Empty.</param>
+         <param index="5">Empty.</param>
+         <param index="6">Empty.</param>
+         <param index="7">Empty.</param>
+     </entry>
+    </enum>
  </enums>
  <messages>
   <message id="220" name="TIME_WHEN_ARMED">

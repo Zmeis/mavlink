@@ -1542,11 +1542,6 @@
       <field type="uint8_t" name="cmd_id" enum="GOPRO_COMMAND">Command ID.</field>
       <field type="uint8_t[4]" name="value">Value.</field>
     </message>
-    <message id="219" name="GOPRO_SET_RESPONSE">
-      <description>Response from a GOPRO_COMMAND set request.</description>
-      <field type="uint8_t" name="cmd_id" enum="GOPRO_COMMAND">Command ID.</field>
-      <field type="uint8_t" name="status" enum="GOPRO_REQUEST_STATUS">Status.</field>
-    </message>
     <!-- 219 to 224 RESERVED for more GOPRO-->
     <!-- 225 EFI_STATUS moved to common.xml -->
     <message id="226" name="RPM">

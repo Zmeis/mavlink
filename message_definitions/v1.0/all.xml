@@ -5,7 +5,7 @@
     messages: 8000 - 8999
     commands: 40001 - 41999
   -->
-  <include>ASLUAV.xml</include>
+  <!-- <include>ASLUAV.xml</include> -->
   <include>common.xml</include>
   <include>development.xml</include>
   <include>icarous.xml</include>
@@ -17,7 +17,8 @@
   <include>python_array_test.xml</include>
   <include>standard.xml</include>
   <include>test.xml</include>
-  <include>ualberta.xml</include>
+  <!-- <include>ualberta.xml</include> -->
+  <include>Albatros.xml</include>
   <include>uAvionix.xml</include>
   <!-- loweheiser.xml range of IDs:
        messages: 10150 - 10199

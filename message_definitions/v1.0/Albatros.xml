@@ -37,8 +37,31 @@
          <param index="7">Empty.</param>
      </entry>
     </enum>
+    <enum name="CAM_HEART_STATUS">
+      <entry value="0" name="CAM_HEART_DISCONNECT">
+        <description>Camera disconnect.</description>
+      </entry>
+      <entry value="1" name="CAM_HEART_INACTIVE">
+        <description>Camera inactive.</description>
+      </entry>
+      <entry value="2" name="CAM_HEART_SUSPEND">
+        <description>Camera suspend.</description>
+      </entry>
+      <entry value="3" name="CAM_HEART_ACTIVE">
+        <description>Camera active.</description>
+      </entry>
+    </enum>
  </enums>
  <messages>
+  <message id="187" name="HEARTBEAT_CAMERA">
+      <description>This message informs the ground station when the camera is connected or disconnected.</description>
+      <field type="uint8_t" name="camera_1" enum="CAM_HEART_STATUS">Camera 1 status</field>
+      <field type="uint8_t" name="camera_2" enum="CAM_HEART_STATUS">Camera 2 status</field>
+      <field type="uint8_t" name="camera_3" enum="CAM_HEART_STATUS">Camera 3 status</field>
+      <field type="uint8_t" name="camera_4" enum="CAM_HEART_STATUS">Camera 4 status</field>
+      <field type="uint8_t" name="camera_5" enum="CAM_HEART_STATUS">Camera 5 status</field>
+      <field type="uint8_t" name="camera_6" enum="CAM_HEART_STATUS">Camera 6 status</field>
+  </message>
   <message id="220" name="TIME_WHEN_ARMED">
    <description>Time time_boot_ms when autopilot armed</description>
    <field type="uint32_t" name="msec">Timestamp (milliseconds)</field>

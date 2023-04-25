@@ -1605,13 +1605,15 @@
       <field type="uint8_t" name="status" enum="GOPRO_REQUEST_STATUS">Status.</field>
       <field type="uint8_t[4]" name="value">Value.</field>
     </message>
+	<!-- changed in Albatros.xml 
     <message id="218" name="GOPRO_SET_REQUEST">
       <description>Request to set a GOPRO_COMMAND with a desired.</description>
       <field type="uint8_t" name="target_system">System ID.</field>
       <field type="uint8_t" name="target_component">Component ID.</field>
       <field type="uint8_t" name="cmd_id" enum="GOPRO_COMMAND">Command ID.</field>
       <field type="uint8_t[4]" name="value">Value.</field>
-    </message>
+	</message>
+	-->
     <!-- 219 to 224 RESERVED for more GOPRO-->
     <!-- 225 EFI_STATUS moved to common.xml -->
     <message id="226" name="RPM">

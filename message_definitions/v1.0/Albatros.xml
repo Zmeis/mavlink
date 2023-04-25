@@ -51,6 +51,20 @@
         <description>Camera active.</description>
       </entry>
     </enum>
+    <enum name="CAM_MODELS">
+      <entry value="0" name="CAM_MODEL1">
+        <description>Camera model 1.</description>
+      </entry>
+      <entry value="1" name="CAM_MODEL2">
+        <description>Camera model 2</description>
+      </entry>
+      <entry value="2" name="CAM_MODEL3">
+        <description>Camera model 3</description>
+      </entry>
+      <entry value="3" name="CAM_MODEL4">
+        <description>Camera model 4</description>
+      </entry>
+    </enum>
  </enums>
  <messages>
   <message id="187" name="HEARTBEAT_CAMERA">
@@ -61,6 +75,17 @@
       <field type="uint8_t" name="camera_4" enum="CAM_HEART_STATUS">Camera 4 status</field>
       <field type="uint8_t" name="camera_5" enum="CAM_HEART_STATUS">Camera 5 status</field>
       <field type="uint8_t" name="camera_6" enum="CAM_HEART_STATUS">Camera 6 status</field>
+  </message>
+  <message id="218" name="ALB_CAMERA_INFO">
+	  <description>Alb_Camera_Backend camera information message</description>
+	  <field type="uint16_t" name="width_mm" units="millimeters">phisic matrix size width</field>
+	  <field type="uint16_t" name="height_mm" units="millimeters">phisic matrix size height</field>
+	  <field type="uint8_t" name="camera_id" enum="CAM_MODELS">ID of cameras model</field>
+	  <field type="uint8_t" name="focus" units="millimeters">ID of cameras model</field>
+	  <field type="uint16_t" name="width_pix" units="pixels">pixels matrix size width</field>
+	  <field type="uint16_t" name="height_pix" units="pixels">pixels matrix size height</field>
+	  <field type="uint8_t" name="zoom">camera zoom</field>
+	  <field type="uint8_t" name="palitra">camera palitra</field>
   </message>
   <message id="220" name="TIME_WHEN_ARMED">
    <description>Time time_boot_ms when autopilot armed</description>

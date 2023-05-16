@@ -37,6 +37,11 @@
          <param index="7">Empty.</param>
      </entry>
     </enum>
+    <enum name="MAV_MOUNT_MODE">
+      <entry value="7" name="MAV_MOUNT_MODE_EXTERNAL_TRACKER_TARGETING">
+        <description>Auto targeting via Nvidia Jetson module or other</description>
+      </entry>
+    </enum>
  </enums>
  <messages>
   <message id="220" name="TIME_WHEN_ARMED">

@@ -81,7 +81,7 @@
 	  <field type="uint16_t" name="width_mm" units="millimeters">phisic matrix size width</field>
 	  <field type="uint16_t" name="height_mm" units="millimeters">phisic matrix size height</field>
 	  <field type="uint8_t" name="camera_id" enum="CAM_MODELS">ID of cameras model</field>
-	  <field type="uint8_t" name="focus" units="millimeters">ID of cameras model</field>
+	  <field type="uint16_t" name="focus" units="millimeters">13 bit focus mm * 10</field>
 	  <field type="uint16_t" name="width_pix" units="pixels">pixels matrix size width</field>
 	  <field type="uint16_t" name="height_pix" units="pixels">pixels matrix size height</field>
 	  <field type="uint8_t" name="zoom">camera zoom</field>
@@ -103,8 +103,7 @@
     <field type="uint16_t" name="throttle" units="%">Current throttle setting in integer percent, 0 to 100</field>
     <field type="float" name="alt" units="m">Current altitude (MSL), in meters</field>
     <field type="int16_t" name="vibration_z">Vibration levels on Z-axis</field>
-    <field type="uint8_t" name="camera_zoom">focus distance of camera</field>
-    <field type="uint8_t" name="camera_num">Camera number</field>
+    <field type="uint16_t" name="camera_zoom">3 bit - camera number; 13 bit - focus distance of camera</field>
     <field type="int32_t" name="lat" units="degE7">Latitude (WGS84, EGM96 ellipsoid), in degrees * 1E7. global possition</field>
     <field type="int32_t" name="lon" units="degE7">Longitude (WGS84, EGM96 ellipsoid), in degrees * 1E7, global position</field>
     <field type="float" name="climb" units="m/s">Current climb rate in meters/second</field>

@@ -103,7 +103,7 @@
     <field type="uint16_t" name="throttle" units="%">Current throttle setting in integer percent, 0 to 100</field>
     <field type="float" name="alt" units="m">Current altitude (MSL), in meters</field>
     <field type="int16_t" name="vibration_z">Vibration levels on Z-axis</field>
-    <field type="uint8_t" name="camera_num">hight 4 bits - camera type; low 4 bits camera num</field>
+    <field type="uint8_t" name="camera_num">hight 4 bits - camera type(0- unknown; 1-XcoreLA; 2-XcoreFTII; 3-Visca); low 4 bits camera num</field>
     <field type="uint16_t" name="focal_len">Camera focal length</field>
     <field type="int32_t" name="lat" units="degE7">Latitude (WGS84, EGM96 ellipsoid), in degrees * 1E7. global possition</field>
     <field type="int32_t" name="lon" units="degE7">Longitude (WGS84, EGM96 ellipsoid), in degrees * 1E7, global position</field>

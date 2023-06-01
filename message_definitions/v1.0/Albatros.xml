@@ -51,20 +51,6 @@
         <description>Camera active.</description>
       </entry>
     </enum>
-    <enum name="CAM_MODELS">
-      <entry value="0" name="CAM_UNKNOWN">
-        <description>Camera protocol unknown.</description>
-      </entry>
-      <entry value="1" name="CAM_XCORELA">
-        <description>Camera protocol Xcore LA</description>
-      </entry>
-      <entry value="2" name="CAM_XCOREFTII">
-        <description>Camera protocol Xcore FTII</description>
-      </entry>
-      <entry value="3" name="CAM_VISCA">
-        <description>Camera protocol Visca</description>
-      </entry>
-    </enum>
  </enums>
  <messages>
   <message id="187" name="HEARTBEAT_CAMERA">
@@ -80,7 +66,7 @@
 	  <description>Alb_Camera_Backend camera information message</description>
 	  <field type="uint16_t" name="width_mm" units="millimeters">phisic matrix size width * 100</field>
 	  <field type="uint16_t" name="height_mm" units="millimeters">phisic matrix size height * 100</field>
-	  <field type="uint8_t" name="camera_type" enum="CAM_MODELS">ID of cameras model</field>
+	  <field type="uint8_t" name="camera_num">hight 4 bits - camera type; low 4 bits camera num</field>
 	  <field type="uint16_t" name="focal_len" units="millimeters">(focal_len/200) * 65536</field>
 	  <field type="uint16_t" name="width_pix" units="pixels">pixels matrix size width</field>
 	  <field type="uint16_t" name="height_pix" units="pixels">pixels matrix size height</field>

@@ -70,7 +70,7 @@
 	  <field type="uint16_t" name="focal_len" units="millimeters">(focal_len/200) * 65536</field>
 	  <field type="uint16_t" name="width_pix" units="pixels">pixels matrix size width</field>
 	  <field type="uint16_t" name="height_pix" units="pixels">pixels matrix size height</field>
-	  <field type="uint8_t" name="zoom">camera zoom</field>
+	  <field type="uint16_t" name="zoom">camera zoom * 100</field>
 	  <field type="uint8_t" name="palitra">camera palitra</field>
 	  <field type="uint16_t" name="fmin">focus lenght minimal (format: flen * 100)</field>
 	  <field type="uint16_t" name="fmax">focus lenght maximal</field>

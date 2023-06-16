@@ -51,20 +51,6 @@
         <description>Camera active.</description>
       </entry>
     </enum>
-    <enum name="CAM_MODELS">
-      <entry value="0" name="CAM_UNKNOWN">
-        <description>Camera protocol unknown.</description>
-      </entry>
-      <entry value="1" name="CAM_XCORELA">
-        <description>Camera protocol Xcore LA</description>
-      </entry>
-      <entry value="2" name="CAM_XCOREFTII">
-        <description>Camera protocol Xcore FTII</description>
-      </entry>
-      <entry value="3" name="CAM_VISCA">
-        <description>Camera protocol Visca</description>
-      </entry>
-    </enum>
     <enum name="MAV_MOUNT_MODE">
       <entry value="7" name="MAV_MOUNT_MODE_EXTERNAL_TRACKER_TARGETING">
         <description>Auto targeting via Nvidia Jetson module or other</description>
@@ -85,12 +71,14 @@
 	  <description>Alb_Camera_Backend camera information message</description>
 	  <field type="uint16_t" name="width_mm" units="millimeters">phisic matrix size width * 100</field>
 	  <field type="uint16_t" name="height_mm" units="millimeters">phisic matrix size height * 100</field>
-	  <field type="uint8_t" name="camera_type" enum="CAM_MODELS">ID of cameras model</field>
+	  <field type="uint8_t" name="camera_num">hight 4 bits - camera type; low 4 bits camera num</field>
 	  <field type="uint16_t" name="focal_len" units="millimeters">(focal_len/200) * 65536</field>
 	  <field type="uint16_t" name="width_pix" units="pixels">pixels matrix size width</field>
 	  <field type="uint16_t" name="height_pix" units="pixels">pixels matrix size height</field>
-	  <field type="uint8_t" name="zoom">camera zoom</field>
+	  <field type="uint16_t" name="zoom">camera zoom * 100</field>
 	  <field type="uint8_t" name="palitra">camera palitra</field>
+	  <field type="uint16_t" name="fmin">focus lenght minimal (format: flen * 100)</field>
+	  <field type="uint16_t" name="fmax">focus lenght maximal</field>
   </message>
   <message id="220" name="TIME_WHEN_ARMED">
    <description>Time time_boot_ms when autopilot armed</description>
@@ -109,7 +97,7 @@
     <field type="float" name="alt" units="m">Current altitude (MSL), in meters</field>
     <field type="int16_t" name="vibration_z">Vibration levels on Z-axis</field>
     <field type="uint8_t" name="camera_num">hight 4 bits - camera type(0- unknown; 1-XcoreLA; 2-XcoreFTII; 3-Visca); low 4 bits camera num</field>
-    <field type="uint16_t" name="focal_len">Camera focal length</field>
+    <field type="uint16_t" name="focal_len">Camera focal length (focal_len/200) * 65536</field>
     <field type="int32_t" name="lat" units="degE7">Latitude (WGS84, EGM96 ellipsoid), in degrees * 1E7. global possition</field>
     <field type="int32_t" name="lon" units="degE7">Longitude (WGS84, EGM96 ellipsoid), in degrees * 1E7, global position</field>
     <field type="float" name="climb" units="m/s">Current climb rate in meters/second</field>

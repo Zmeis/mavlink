@@ -36,6 +36,16 @@
          <param index="6">Empty.</param>
          <param index="7">Empty.</param>
      </entry>
+      <entry value="43004" name="MAV_CMD_DO_SET_WIND" hasLocation="false" isDestination="false">
+        <description>Change speed and/or throttle set points.</description>
+        <param index="1" label="Speed" units="m/s" minValue="0"></param>
+        <param index="2" label="Direction" units="deg"></param>
+        <param index="3">Empty</param>
+        <param index="4">Empty</param>
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
     </enum>
     <enum name="CAM_HEART_STATUS">
       <entry value="0" name="CAM_HEART_DISCONNECT">

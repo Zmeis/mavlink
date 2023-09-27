@@ -77,6 +77,11 @@
       <field type="uint8_t" name="camera_5" enum="CAM_HEART_STATUS">Camera 5 status</field>
       <field type="uint8_t" name="camera_6" enum="CAM_HEART_STATUS">Camera 6 status</field>
   </message>
+  <message id="188" name="ALB_MOUNT_RC">
+      <description></description>
+      <field type="uint8_t" name="chan7_raw" units="us">RC channel 7 value.</field>
+      <field type="uint8_t" name="chan8_raw" units="us">RC channel 8 value.</field>
+  </message>
   <message id="218" name="ALB_CAMERA_INFO">
 	  <description>Alb_Camera_Backend camera information message</description>
 	  <field type="uint16_t" name="width_mm" units="millimeters">phisic matrix size width * 100</field>

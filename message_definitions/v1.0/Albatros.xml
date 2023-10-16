@@ -142,12 +142,12 @@
       <field type="uint8_t" name="chan7_raw" units="us">RC channel 7 value.</field>
       <field type="uint8_t" name="chan8_raw" units="us">RC channel 8 value.</field>
   </message>
-  <message id="199" name="JETSON_PID">
+<!--   <message id="199" name="JETSON_PID">
     <description>Message with errors for PID</description>
     <field type="float" name="error_yaw" units="rad">error for PID on yaw axis (rad, -pi..+pi)</field>
     <field type="float" name="error_pitch" units="rad">error for PID on pitch axis (rad, -pi..+pi)</field>
-  </message>
-  <message id="XXX" name="JETSON_BBOX">
+  </message> -->
+  <message id="199" name="JETSON_BBOX">
     <description>Bbox around tracked object from jetson</description>
     <field type="uint16_t" name="top_left_x" units="pixel">Coordinate X of top left angle of bbox in pixel</field>
     <field type="uint16_t" name="top_left_y" units="pixel">Coordinate Y of top left angle of bbox in pixel</field>

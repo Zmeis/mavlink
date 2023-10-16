@@ -149,8 +149,8 @@
   </message> -->
   <message id="199" name="JETSON_BBOX">
     <description>Bbox around tracked object from jetson</description>
-    <field type="uint16_t" name="top_left_x" units="pixel">Coordinate X of top left angle of bbox in pixel</field>
-    <field type="uint16_t" name="top_left_y" units="pixel">Coordinate Y of top left angle of bbox in pixel</field>
+    <field type="int16_t" name="top_left_x" units="pixel">Coordinate X of top left angle of bbox in pixel</field>
+    <field type="int16_t" name="top_left_y" units="pixel">Coordinate Y of top left angle of bbox in pixel</field>
     <field type="uint16_t" name="height" units="pixel">Height of bbox in pixel</field>
     <field type="uint16_t" name="width" units="pixel">Width of bbox in pixel</field>
   </message>

@@ -46,6 +46,66 @@
         <param index="6">Empty</param>
         <param index="7">Empty</param>
       </entry>
+	<entry value="44000" name="SET_TRACKING" hasLocation="false" isDestination="false">
+         <description>Send coomand to tracking with bbox</description>
+         <param index="1" label="top_left_x" units="pixel"></param>
+         <param index="2" label="top_left_y" units="pixel"></param>
+         <param index="3" label="height" units="pixel"></param>
+         <param index="4" label="wigth" units="pixel"></param>
+         <param index="5">Empty.</param>
+         <param index="6">Empty.</param>
+         <param index="7">Empty.</param>
+     </entry>
+	<entry value="44001" name="STOP_TRACKING" hasLocation="false" isDestination="false">
+         <description>Stop tracking</description>
+         <param index="1">Empty.</param>
+         <param index="2">Empty.</param>
+         <param index="3">Empty.</param>
+         <param index="4">Empty.</param>
+         <param index="5">Empty.</param>
+         <param index="6">Empty.</param>
+         <param index="7">Empty.</param>
+     </entry>
+	<entry value="44002" name="SEND_TRACKING_BBOX" hasLocation="false" isDestination="false">
+         <description>Sends a bbox around the tracked object</description>
+         <param index="1" label="top_left_x" units="pixel"></param>
+         <param index="2" label="top_left_y" units="pixel"></param>
+         <param index="3" label="height" units="pixel"></param>
+         <param index="4" label="wigth" units="pixel"></param>
+         <param index="5">Empty.</param>
+         <param index="6" label="size_of_image" units="parrots"></param>
+         <param index="7">Empty.</param>
+     </entry>
+	<entry value="44003" name="SEND_REMOTE_CONTROL" hasLocation="false" isDestination="false">
+         <description>Don't use now</description>
+         <param index="1" label="x" units="."></param>
+         <param index="2" label="y" units="."></param>
+         <param index="3">Empty.</param>
+         <param index="4">Empty.</param>
+         <param index="5">Empty.</param>
+         <param index="6">Empty.</param>
+         <param index="7">Empty.</param>
+     </entry>
+	<entry value="44005" name="SEND_ERROR_JETSON" hasLocation="false" isDestination="false">
+         <description>Don't use now</description>
+         <param index="1" label="code_of_error" units="int"></param>
+         <param index="2">Empty.</param>
+         <param index="3">Empty.</param>
+         <param index="4">Empty.</param>
+         <param index="5">Empty.</param>
+         <param index="6">Empty.</param>
+         <param index="7">Empty.</param>
+     </entry>
+	<entry value="44007" name="MAV_CMD_PID_ERRORS" hasLocation="false" isDestination="false">
+         <description>Set the distance to be repeated on mission resume</description>
+         <param index="1" label="error_yaw" units="rad"></param>
+         <param index="2" label="error_pitch" units="rad"></param>
+         <param index="3">Empty.</param>
+         <param index="4">Empty.</param>
+         <param index="5">Empty.</param>
+         <param index="6">Empty.</param>
+         <param index="7">Empty.</param>
+     </entry>
     </enum>
     <enum name="CAM_HEART_STATUS">
       <entry value="0" name="CAM_HEART_DISCONNECT">
@@ -81,6 +141,18 @@
       <description></description>
       <field type="uint8_t" name="chan7_raw" units="us">RC channel 7 value.</field>
       <field type="uint8_t" name="chan8_raw" units="us">RC channel 8 value.</field>
+  </message>
+  <message id="199" name="JETSON_PID">
+    <description>Message with errors for PID</description>
+    <field type="float" name="error_yaw" units="rad">error for PID on yaw axis (rad, -pi..+pi)</field>
+    <field type="float" name="error_pitch" units="rad">error for PID on pitch axis (rad, -pi..+pi)</field>
+  </message>
+  <message id="XXX" name="JETSON_BBOX">
+    <description>Bbox around tracked object from jetson</description>
+    <field type="uint16_t" name="top_left_x" units="pixel">Coordinate X of top left angle of bbox in pixel</field>
+    <field type="uint16_t" name="top_left_y" units="pixel">Coordinate Y of top left angle of bbox in pixel</field>
+    <field type="uint16_t" name="height" units="pixel">Height of bbox in pixel</field>
+    <field type="uint16_t" name="width" units="pixel">Width of bbox in pixel</field>
   </message>
   <message id="218" name="ALB_CAMERA_INFO">
 	  <description>Alb_Camera_Backend camera information message</description>
